@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dsgovbr-sphinx-theme"
+version = "0.1.0"
+description = "Tema Sphinx comunitário e não oficial inspirado no Design System GOV.BR (DSGovBR)"
+readme = "README.md"
+authors = [{ name = "Kelson da Costa Medeiros", email = "kelsoncm@gmail.com" }]
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md", "src/dsgovbr_sphinx_theme/static/fonts/rawline/OFL.txt"]
+requires-python = ">=3.10"
+dependencies = ["sphinx>=7.3"]
+keywords = ["sphinx", "theme", "dsgovbr", "gov.br", "design-system"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: Sphinx",
+    "Framework :: Sphinx :: Theme",
+    "Intended Audience :: Developers",
+    "Natural Language :: Portuguese (Brazilian)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Documentation",
+    "Topic :: Documentation :: Sphinx",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6", "doc8>=1.1"]
+
+[project.urls]
+Homepage = "https://abrasileirado.github.io/dsgovbr-sphinx-theme/"
+Repository = "https://github.com/abrasileirado/dsgovbr-sphinx-theme"
+Issues = "https://github.com/abrasileirado/dsgovbr-sphinx-theme/issues"
+
+[project.entry-points."sphinx.html_themes"]
+dsgovbr_sphinx_theme = "dsgovbr_sphinx_theme"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+dsgovbr_sphinx_theme = [
+    "*.html",
+    "theme.toml",
+    "static/css/*.css",
+    "static/js/*.js",
+    "static/fonts/rawline/*",
+    "componentes_static/vendor/*/*",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]

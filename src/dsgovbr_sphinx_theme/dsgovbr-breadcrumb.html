@@ -1,0 +1,22 @@
+{#- Breadcrumb no estilo do GOV.BR DS + link "Editar no GitHub". -#}
+<div class="dsgovbr-crumbs">
+  <nav class="dsgovbr-breadcrumb" aria-label="Você está aqui">
+    <ol>
+      <li><a href="{{ pathto(root_doc) }}">Início</a></li>
+      {%- for parent in parents %}
+      <li><a href="{{ parent.link|e }}">{{ parent.title }}</a></li>
+      {%- endfor %}
+      {%- if pagename != root_doc and title %}
+      <li aria-current="page">{{ title|striptags|e }}</li>
+      {%- endif %}
+    </ol>
+  </nav>
+  {%- if theme_show_edit_on_github|tobool and (theme_github_repo or theme_github_url) and page_source_suffix %}
+  {%- set gh_repo = theme_github_repo or (theme_github_url.rstrip('/').split('/')[-2:]|join('/')) %}
+  {%- set edit_url = "https://github.com/" ~ gh_repo ~ "/edit/" ~ (theme_github_version or "main") ~ "/" ~ (theme_doc_path or "docs/").strip('/') ~ "/" ~ pagename ~ page_source_suffix %}
+  <a class="dsgovbr-btn dsgovbr-btn--secondary dsgovbr-btn--small" href="{{ edit_url|e }}" rel="noopener">
+    <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16v4Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+    Editar no GitHub
+  </a>
+  {%- endif %}
+</div>

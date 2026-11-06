@@ -1,0 +1,27 @@
+[theme]
+inherit = "basic"
+stylesheets = ["basic.css", "css/rawline.css", "css/dsgovbr-sphinx-theme.css"]
+sidebars = ["dsgovbr-menu.html"]
+pygments_style = { default = "default" }
+
+[options]
+# Identidade
+project_name = ""
+tagline = ""
+logo = ""
+logo_height = "40px"
+# Links do cabeçalho: "Título|destino, Outro|https://..."
+navigation_links = ""
+# Repositório (botão "Editar no GitHub")
+github_url = ""
+github_repo = ""
+github_version = "main"
+doc_path = "docs/"
+show_edit_on_github = true
+# Aparência
+primary_color = ""
+enable_dark_mode = true
+show_disclaimer = true
+disclaimer_text = ""
+footer_text = ""
+globaltoc_maxdepth = 3

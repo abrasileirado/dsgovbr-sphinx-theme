@@ -1,0 +1,23 @@
+{#- Menu lateral: índice global (toctree) no estilo do componente "menu" do GOV.BR DS. -#}
+<div class="dsgovbr-menu__header">
+  <span class="dsgovbr-menu__title">Conteúdo</span>
+  <button type="button" class="dsgovbr-btn-circle dsgovbr-menu-close" aria-label="Fechar menu">
+    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  </button>
+</div>
+{%- if dsgovbr_navigation_links %}
+<nav class="dsgovbr-menu__nav dsgovbr-menu__links" aria-label="Links do projeto">
+  <ul>
+  {%- for link_title, link_target in dsgovbr_navigation_links %}
+    {%- if link_target.startswith('http://') or link_target.startswith('https://') %}
+    <li><a href="{{ link_target|e }}" rel="noopener">{{ link_title|e }}</a></li>
+    {%- else %}
+    <li><a href="{{ pathto(link_target[:-5] if link_target.endswith('.html') else link_target) }}">{{ link_title|e }}</a></li>
+    {%- endif %}
+  {%- endfor %}
+  </ul>
+</nav>
+{%- endif %}
+<nav class="dsgovbr-menu__nav" aria-label="Páginas">
+  {{ toctree(maxdepth=theme_globaltoc_maxdepth|int, collapse=False, includehidden=True, titles_only=True) }}
+</nav>
