@@ -8,7 +8,7 @@ from pathlib import Path
 import pytest
 from sphinx.application import Sphinx
 
-from dsgovbr_sphinx_theme import _parse_links, get_html_theme_path
+from dsgovbr_sphinx_theme import _edit_excluido, _parse_links, _parse_patterns, get_html_theme_path
 
 CONF_BASE = """
 project = "Projeto Teste"
@@ -195,3 +195,30 @@ def test_valor_de_progresso_invalido(tmp_path: Path) -> None:
     """
     _, avisos = construir(tmp_path, {"index": pagina}, extensoes=EXT)
     assert "entre 0 e 100" in avisos
+
+
+def test_parse_patterns_e_exclusao() -> None:
+    assert _parse_patterns("api/*, gerado") == ["api/*", "gerado"]
+    assert _parse_patterns(["api/*"]) == ["api/*"]
+    assert _parse_patterns("") == []
+    assert _edit_excluido("api/dsgovbr.menus", ["api/*"])
+    assert not _edit_excluido("guia", ["api/*"])
+
+
+def test_edit_on_github_exclude(tmp_path: Path) -> None:
+    src = tmp_path / "src"
+    (src / "api").mkdir(parents=True)
+    conf = (
+        'html_theme = "dsgovbr_sphinx_theme"\n'
+        'html_theme_options = {"github_url": "https://github.com/org/repo",'
+        ' "edit_on_github_exclude": "api/*"}\n'
+    )
+    (src / "conf.py").write_text(conf, encoding="utf-8")
+    index = "Início\n======\n\n.. toctree::\n\n   api/mod\n"
+    (src / "index.rst").write_text(index, encoding="utf-8")
+    (src / "api" / "mod.rst").write_text("Mod\n===\n", encoding="utf-8")
+    out = tmp_path / "out"
+    app = Sphinx(str(src), str(src), str(out), str(tmp_path / "dt"), "html", status=None)
+    app.build()
+    assert "Editar no GitHub" in (out / "index.html").read_text(encoding="utf-8")
+    assert "Editar no GitHub" not in (out / "api" / "mod.html").read_text(encoding="utf-8")

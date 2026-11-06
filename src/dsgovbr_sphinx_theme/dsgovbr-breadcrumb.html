@@ -11,7 +11,7 @@
       {%- endif %}
     </ol>
   </nav>
-  {%- if theme_show_edit_on_github|tobool and (theme_github_repo or theme_github_url) and page_source_suffix %}
+  {%- if theme_show_edit_on_github|tobool and not dsgovbr_edit_excluido and (theme_github_repo or theme_github_url) and page_source_suffix %}
   {%- set gh_repo = theme_github_repo or (theme_github_url.rstrip('/').split('/')[-2:]|join('/')) %}
   {%- set edit_url = "https://github.com/" ~ gh_repo ~ "/edit/" ~ (theme_github_version or "main") ~ "/" ~ (theme_doc_path or "docs/").strip('/') ~ "/" ~ pagename ~ page_source_suffix %}
   <a class="dsgovbr-btn dsgovbr-btn--secondary dsgovbr-btn--small" href="{{ edit_url|e }}" rel="noopener">

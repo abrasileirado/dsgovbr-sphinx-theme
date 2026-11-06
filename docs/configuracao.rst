@@ -48,6 +48,11 @@ Todas as opções vão em ``html_theme_options`` no ``conf.py``:
    * - ``show_edit_on_github``
      - ``True``
      - Mostra o botão "Editar no GitHub" quando há repositório configurado.
+   * - ``edit_on_github_exclude``
+     - vazio
+     - Páginas sem o botão "Editar no GitHub": padrões glob sobre o nome da página,
+       separados por vírgula ou em lista (ex.: ``"api/*"`` para a referência gerada
+       pelo ``sphinx.ext.apidoc``, que não existe no repositório).
    * - ``primary_color``
      - ``#1351b4``
      - Cor interativa (links, destaques). Mantenha contraste AA.
