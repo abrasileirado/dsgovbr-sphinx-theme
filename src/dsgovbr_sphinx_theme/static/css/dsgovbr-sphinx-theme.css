@@ -271,6 +271,7 @@ div.code-block-caption { font-size: 14px; font-weight: 600; color: var(--dsgovbr
   background: var(--dsgovbr-bg-alt); color: var(--dsgovbr-text); font-weight: 600;
   border-bottom: 2px solid var(--dsgovbr-interactive);
 }
+.dsgovbr-article table.docutils :is(td, th) > :last-child { margin-bottom: 0; }
 .dsgovbr-article table.docutils tbody tr:hover { background: var(--dsgovbr-hover); }
 .dsgovbr-article table.docutils caption { caption-side: top; text-align: left; font-weight: 600; padding-bottom: 8px; }
 
