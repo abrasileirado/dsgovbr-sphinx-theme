@@ -18,6 +18,8 @@ github_repo = ""
 github_version = "main"
 doc_path = "docs/"
 show_edit_on_github = true
+# Páginas sem o botão (geradas no build): globs sobre o nome da página, ex.: "api/*"
+edit_on_github_exclude = ""
 # Aparência
 primary_color = ""
 enable_dark_mode = true
