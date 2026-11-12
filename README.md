@@ -52,6 +52,13 @@ html_theme_options = {
 
 Opções do tema e a lista completa de componentes estão na documentação.
 
+## Versionamento
+
+A versão segue `X.Y.Z.n`: `X.Y.Z` é a versão do GOV.BR DS em que o tema se baseia
+(hoje 3.7.0) e `n` é a revisão do tema para esse DS (`3.7.0.0`, `3.7.0.1`...). Para
+acompanhar só as revisões do mesmo DS, use `dsgovbr-sphinx-theme~=3.7.0.0`. As versões
+`0.1.x` e `0.2.0` são anteriores a este esquema.
+
 ## Desenvolvimento
 
 ```bash

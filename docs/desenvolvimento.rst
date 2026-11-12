@@ -18,6 +18,11 @@ A versão do pacote segue ``X.Y.Z.n``: ``X.Y.Z`` é a versão do GOV.BR DS
 para aquela versão do DS (começa em ``0``). Exemplo: ``3.7.0.0``, ``3.7.0.1``.
 As versões ``0.1.x`` e ``0.2.0`` são anteriores a este esquema.
 
+- Ao adotar um novo GOV.BR DS, ``X.Y.Z`` muda e ``n`` volta a ``0``.
+- Correções e melhorias do tema para o mesmo DS incrementam ``n``.
+- Para o PEP 440, ``3.7.0.0`` equivale a ``3.7.0``; ao fixar a versão, use
+  sempre o valor completo (``==3.7.0.1``) ou ``~=3.7.0.0``.
+
 Estrutura
 ---------
 
@@ -43,5 +48,5 @@ O script copia ``dist/dsgovbr-bootstrapped.min.css`` e
 Versão e publicação
 -------------------
 
-A versão fica em ``pyproject.toml``. Criar a tag ``vX.Y.Z`` dispara o workflow de
-release, que publica no PyPI por *Trusted Publishing*.
+A versão fica em ``pyproject.toml``. Criar a tag ``vX.Y.Z.n`` (por exemplo
+``v3.7.0.0``) dispara o workflow de release, que publica no PyPI por *Trusted Publishing*.
