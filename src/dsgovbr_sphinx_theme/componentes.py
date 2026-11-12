@@ -1,12 +1,12 @@
-"""Diretivas e roles reStructuredText para os componentes do dsgovbr-bootstraped.
+"""Diretivas e roles reStructuredText para os componentes do dsgovbr-bootstrapped.
 
 Ative em ``conf.py``::
 
     extensions = ["dsgovbr_sphinx_theme.componentes"]
 
 Cada diretiva/role gera o markup público do Bootstrap 5.3 (``.alert``, ``.card``,
-``.accordion``...), que o CSS do `dsgovbr-bootstraped
-<https://github.com/abrasileirado/dsgovbr-bootstraped>`_ estiliza no padrão do
+``.accordion``...), que o CSS do `dsgovbr-bootstrapped
+<https://github.com/abrasileirado/dsgovbr-bootstrapped>`_ estiliza no padrão do
 GOV.BR DS. O CSS e o ``bootstrap.bundle`` (JS) são empacotados no tema e só são
 carregados quando esta extensão está ativa.
 
@@ -1102,7 +1102,7 @@ def setup(app: Sphinx) -> dict[str, Any]:
         app.add_directive(f"{PREFIXO}{nome}", diretiva)
     _registrar_roles(app)
     # Antes do CSS do tema (prioridade 200): o tema sobrepõe o reboot do Bootstrap.
-    app.add_css_file("vendor/dsgovbr-bootstraped/dsgovbr-bootstraped.min.css", priority=150)
+    app.add_css_file("vendor/dsgovbr-bootstrapped/dsgovbr-bootstrapped.min.css", priority=150)
     app.add_js_file(
         "vendor/bootstrap/bootstrap.bundle.min.js", priority=150, loading_method="defer"
     )

@@ -30,7 +30,7 @@ html_theme_options = {
     "tagline": "Tema Sphinx inspirado no GOV.BR DS",
     "github_url": "https://github.com/abrasileirado/dsgovbr-sphinx-theme",
     "navigation_links": (
-        "dsgovbr-bootstraped|https://abrasileirado.github.io/dsgovbr-bootstraped/, "
+        "dsgovbr-bootstrapped|https://abrasileirado.github.io/dsgovbr-bootstrapped/, "
         "PyPI|https://pypi.org/project/dsgovbr-sphinx-theme/"
     ),
 }

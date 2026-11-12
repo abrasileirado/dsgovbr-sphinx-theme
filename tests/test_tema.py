@@ -170,7 +170,7 @@ def test_componentes(tmp_path: Path) -> None:
     assert 'aria-valuenow="40"' in html
     assert "bootstrap.bundle.min.js" in html
     vendor = out / "_static" / "vendor"
-    assert (vendor / "dsgovbr-bootstraped" / "dsgovbr-bootstraped.min.css").is_file()
+    assert (vendor / "dsgovbr-bootstrapped" / "dsgovbr-bootstrapped.min.css").is_file()
 
 
 def test_componente_mal_usado_gera_erro(tmp_path: Path) -> None:

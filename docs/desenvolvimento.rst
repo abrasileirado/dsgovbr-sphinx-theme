@@ -17,18 +17,18 @@ Estrutura
   ``theme.toml`` e ``static/`` (CSS, JS e fonte Rawline).
 - ``src/dsgovbr_sphinx_theme/componentes.py``: extensão com as diretivas ``br-*``.
 - ``src/dsgovbr_sphinx_theme/componentes_static/vendor/``: CSS do
-  dsgovbr-bootstraped e ``bootstrap.bundle.min.js``, copiados sem modificação.
+  dsgovbr-bootstrapped e ``bootstrap.bundle.min.js``, copiados sem modificação.
 
-Atualizar os assets do dsgovbr-bootstraped
-------------------------------------------
+Atualizar os assets do dsgovbr-bootstrapped
+-------------------------------------------
 
-Com o dsgovbr-bootstraped compilado ao lado (``npm run build``):
+Com o dsgovbr-bootstrapped compilado ao lado (``npm run build``):
 
 .. code-block:: bash
 
-   python scripts/atualizar_vendor.py ../dsgovbr_bootstraped
+   python scripts/atualizar_vendor.py ../dsgovbr_bootstrapped
 
-O script copia ``dist/dsgovbr-bootstraped.min.css`` e
+O script copia ``dist/dsgovbr-bootstrapped.min.css`` e
 ``vendor/bootstrap/dist/js/bootstrap.bundle.min.js`` e atualiza as versões em
 ``THIRD_PARTY_NOTICES.md``.
 

@@ -13,7 +13,7 @@ Direto do GitHub (versão fixa por tag):
 
 .. code-block:: bash
 
-   pip install "dsgovbr-sphinx-theme @ git+https://github.com/abrasileirado/dsgovbr-sphinx-theme@v0.1.2"
+   pip install "dsgovbr-sphinx-theme @ git+https://github.com/abrasileirado/dsgovbr-sphinx-theme@v0.2.0"
 
 No ``docs/conf.py`` do seu projeto:
 
@@ -24,7 +24,7 @@ No ``docs/conf.py`` do seu projeto:
 O Sphinx encontra o tema pelo *entry point* ``sphinx.html_themes``; não é preciso
 ``html_theme_path`` nem listar o tema em ``extensions``.
 
-Para usar também os componentes do dsgovbr-bootstraped (veja :doc:`componentes`):
+Para usar também os componentes do dsgovbr-bootstrapped (veja :doc:`componentes`):
 
 .. code-block:: python
 

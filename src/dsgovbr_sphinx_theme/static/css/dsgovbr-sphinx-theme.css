@@ -1,7 +1,7 @@
 /*!
  * dsgovbr-sphinx-theme — tema Sphinx comunitário e não oficial.
  * Tokens copiados do GOV.BR DS (govbr-ds-core v3.7.0), mesma origem usada pelo
- * dsgovbr-bootstraped (src/scss/_tokens.scss). Licença: MIT.
+ * dsgovbr-bootstrapped (src/scss/_tokens.scss). Licença: MIT.
  */
 
 /* ------------------------------------------------------------------ tokens */
@@ -216,7 +216,7 @@ html[data-modo="escuro"] .dsgovbr-modo__lua { display: none; }
 
 /* ------------------------------------------------------------------- texto */
 /* Só os títulos de seção do Sphinx; títulos dentro de componentes (card, modal...)
-   ficam com o estilo do dsgovbr-bootstraped. */
+   ficam com o estilo do dsgovbr-bootstrapped. */
 .dsgovbr-article section > :is(h1, h2, h3, h4, h5, h6) {
   color: var(--dsgovbr-text); line-height: 1.25; margin: 1.8em 0 0.6em;
 }
