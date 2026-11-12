@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dsgovbr-sphinx-theme"
-version = "0.2.0"
+version = "3.7.0.0"
 description = "Tema Sphinx comunitário e não oficial inspirado no Design System GOV.BR (DSGovBR)"
 readme = "README.md"
 authors = [{ name = "Kelson da Costa Medeiros", email = "kelsoncm@gmail.com" }]
