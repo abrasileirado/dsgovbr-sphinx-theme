@@ -9,6 +9,10 @@ Pelo PyPI:
 
    pip install dsgovbr-sphinx-theme
 
+A versão do tema segue ``X.Y.Z.n``: ``X.Y.Z`` é a versão do GOV.BR DS em que ele se
+baseia e ``n`` é a revisão do tema (veja :doc:`desenvolvimento`). Para acompanhar
+só as revisões de um mesmo DS, fixe ``dsgovbr-sphinx-theme~=3.7.0.0``.
+
 Direto do GitHub (versão fixa por tag):
 
 .. code-block:: bash
