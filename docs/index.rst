@@ -14,7 +14,7 @@ avisos e rodapé no estilo dos componentes do design system, e modo escuro.
 
 Opcionalmente, a extensão :doc:`componentes` traz **diretivas e roles reST** para
 usar nos seus ``.rst`` os componentes do
-`dsgovbr-bootstraped <https://abrasileirado.github.io/dsgovbr-bootstraped/>`_
+`dsgovbr-bootstrapped <https://abrasileirado.github.io/dsgovbr-bootstrapped/>`_
 (alertas, cards, acordeões, abas, modais...).
 
 .. toctree::

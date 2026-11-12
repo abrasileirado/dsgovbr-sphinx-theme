@@ -10,7 +10,7 @@ componentes do design system, modo escuro e layout responsivo.
 
 Inclui a extensão opcional `dsgovbr_sphinx_theme.componentes`, com diretivas e roles reST
 (`.. br-alerta::`, `.. br-card::`, `.. br-acordeao::`, `:br-badge:`...) para usar nos seus
-`.rst` os componentes do [dsgovbr-bootstraped](https://github.com/abrasileirado/dsgovbr-bootstraped).
+`.rst` os componentes do [dsgovbr-bootstrapped](https://github.com/abrasileirado/dsgovbr-bootstrapped).
 
 Documentação: <https://abrasileirado.github.io/dsgovbr-sphinx-theme/>
 

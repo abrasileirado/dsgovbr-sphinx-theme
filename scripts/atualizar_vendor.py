@@ -1,7 +1,7 @@
-"""Copia os assets do dsgovbr-bootstraped (já compilado) para o pacote do tema.
+"""Copia os assets do dsgovbr-bootstrapped (já compilado) para o pacote do tema.
 
 Uso:
-    python scripts/atualizar_vendor.py ../dsgovbr_bootstraped
+    python scripts/atualizar_vendor.py ../dsgovbr_bootstrapped
 """
 
 from __future__ import annotations
@@ -23,8 +23,8 @@ def main(argv: list[str]) -> int:
         return 2
     origem = Path(argv[0]).resolve()
     arquivos = {
-        origem / "dist" / "dsgovbr-bootstraped.min.css": VENDOR / "dsgovbr-bootstraped",
-        origem / "LICENSE": VENDOR / "dsgovbr-bootstraped",
+        origem / "dist" / "dsgovbr-bootstrapped.min.css": VENDOR / "dsgovbr-bootstrapped",
+        origem / "LICENSE": VENDOR / "dsgovbr-bootstrapped",
         origem / "vendor/bootstrap/dist/js/bootstrap.bundle.min.js": VENDOR / "bootstrap",
         origem / "vendor/bootstrap/LICENSE": VENDOR / "bootstrap",
     }
@@ -32,7 +32,7 @@ def main(argv: list[str]) -> int:
     if faltando:
         print(
             "erro: arquivos não encontrados (rode `npm run build` e "
-            "`git submodule update --init` no dsgovbr-bootstraped):\n  " + "\n  ".join(faltando),
+            "`git submodule update --init` no dsgovbr-bootstrapped):\n  " + "\n  ".join(faltando),
             file=sys.stderr,
         )
         return 1
@@ -50,10 +50,10 @@ def main(argv: list[str]) -> int:
         print("erro: versão do Bootstrap não encontrada no cabeçalho do bundle", file=sys.stderr)
         return 1
     texto = NOTICES.read_text(encoding="utf-8")
-    texto = re.sub(r"(dsgovbr-bootstraped \*\*v)[\d.]+", rf"\g<1>{versao_ds}", texto)
+    texto = re.sub(r"(dsgovbr-bootstrapped \*\*v)[\d.]+", rf"\g<1>{versao_ds}", texto)
     texto = re.sub(r"(Bootstrap \*\*v)[\d.]+", rf"\g<1>{casamento[1]}", texto)
     NOTICES.write_text(texto, encoding="utf-8")
-    print(f"THIRD_PARTY_NOTICES.md: dsgovbr-bootstraped v{versao_ds}, Bootstrap v{casamento[1]}")
+    print(f"THIRD_PARTY_NOTICES.md: dsgovbr-bootstrapped v{versao_ds}, Bootstrap v{casamento[1]}")
     return 0
 
 

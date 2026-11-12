@@ -7,17 +7,17 @@ Este pacote redistribui, sem modificação, os arquivos abaixo.
 - Arquivos: `src/dsgovbr_sphinx_theme/static/fonts/rawline/*.woff2` (pesos 300 a 700).
 - Origem: CDN do GOV.BR DS (SERPRO),
   `https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/`,
-  mesma cópia usada no site do dsgovbr-bootstraped.
+  mesma cópia usada no site do dsgovbr-bootstrapped.
 - Licença: **SIL Open Font License 1.1** (`OFL.txt` ao lado das fontes;
   copyright "The Raleway Project Authors"; a Rawline deriva da Raleway).
 - Motivo da cópia: o CDN não envia `Access-Control-Allow-Origin`, o que impede
   carregar a fonte com SRI.
 
-## dsgovbr-bootstraped
+## dsgovbr-bootstrapped
 
-- Arquivo: `src/dsgovbr_sphinx_theme/componentes_static/vendor/dsgovbr-bootstraped/dsgovbr-bootstraped.min.css`
-- Versão: dsgovbr-bootstraped **v0.11.0** (inclui Bootstrap 5.3.8 compilado).
-- Origem: <https://github.com/abrasileirado/dsgovbr-bootstraped>
+- Arquivo: `src/dsgovbr_sphinx_theme/componentes_static/vendor/dsgovbr-bootstrapped/dsgovbr-bootstrapped.min.css`
+- Versão: dsgovbr-bootstrapped **v0.11.0** (inclui Bootstrap 5.3.8 compilado).
+- Origem: <https://github.com/abrasileirado/dsgovbr-bootstrapped>
 - Licença: MIT (`LICENSE` ao lado do arquivo).
 
 ## Bootstrap

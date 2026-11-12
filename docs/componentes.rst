@@ -3,7 +3,7 @@ Componentes (diretivas reST)
 
 A extensão ``dsgovbr_sphinx_theme.componentes`` registra diretivas ``.. br-*::`` e
 roles ``:br-*:`` que geram o markup público do Bootstrap 5.3. O CSS do
-`dsgovbr-bootstraped <https://abrasileirado.github.io/dsgovbr-bootstraped/>`_
+`dsgovbr-bootstrapped <https://abrasileirado.github.io/dsgovbr-bootstrapped/>`_
 estiliza esse markup no padrão do GOV.BR DS.
 
 .. code-block:: python
@@ -11,7 +11,7 @@ estiliza esse markup no padrão do GOV.BR DS.
    # conf.py
    extensions = ["dsgovbr_sphinx_theme.componentes"]
 
-A extensão publica o CSS do dsgovbr-bootstraped e o ``bootstrap.bundle.min.js``
+A extensão publica o CSS do dsgovbr-bootstrapped e o ``bootstrap.bundle.min.js``
 (comportamento de acordeão, abas, modal...). Funciona com qualquer tema HTML,
 mas foi pensada para o ``dsgovbr_sphinx_theme``.
 
@@ -20,8 +20,8 @@ mas foi pensada para o ``dsgovbr_sphinx_theme``.
    Toda diretiva aceita ``:class:`` para acrescentar classes (ex.: utilitárias do
    Bootstrap). Em saídas que não são HTML (PDF/LaTeX, texto), só o conteúdo textual
    é mantido. O status de cada componente (Estável, Limitado, Não suportado) segue a
-   `matriz de compatibilidade do dsgovbr-bootstraped
-   <https://abrasileirado.github.io/dsgovbr-bootstraped/requisitos.html>`_.
+   `matriz de compatibilidade do dsgovbr-bootstrapped
+   <https://abrasileirado.github.io/dsgovbr-bootstrapped/requisitos.html>`_.
 
 Alerta
 ------
