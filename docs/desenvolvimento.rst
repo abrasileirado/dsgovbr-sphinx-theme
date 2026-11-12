@@ -10,6 +10,14 @@ Desenvolvimento
    uv run ruff check .
    uv run sphinx-build -W -b html docs docs/_build/html
 
+Versionamento
+-------------
+
+A versão do pacote segue ``X.Y.Z.n``: ``X.Y.Z`` é a versão do GOV.BR DS
+(``govbr-ds-core``) em que o tema se baseia e ``n`` é a revisão do próprio tema
+para aquela versão do DS (começa em ``0``). Exemplo: ``3.7.0.0``, ``3.7.0.1``.
+As versões ``0.1.x`` e ``0.2.0`` são anteriores a este esquema.
+
 Estrutura
 ---------
 

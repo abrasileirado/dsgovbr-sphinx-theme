@@ -13,7 +13,7 @@ Direto do GitHub (versão fixa por tag):
 
 .. code-block:: bash
 
-   pip install "dsgovbr-sphinx-theme @ git+https://github.com/abrasileirado/dsgovbr-sphinx-theme@v0.2.0"
+   pip install "dsgovbr-sphinx-theme @ git+https://github.com/abrasileirado/dsgovbr-sphinx-theme@v3.7.0.0"
 
 No ``docs/conf.py`` do seu projeto:
 
